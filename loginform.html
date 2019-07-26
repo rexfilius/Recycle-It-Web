@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/mystyles.css">
+</head>
+
+<body id="one">
+    <div class="two">
+        <h2>Request</h2>
+    </div>
+    <form method="post" action="login.php">
+        <?php include('errors.php'); 
+      if (isset($_SESSION['msg'])){
+          echo $_SESSION['msg'];
+      }
+      
+      ?>
+        <div class="input-group">
+            <label>Name</label>
+            <input type="text" name="name">
+        </div>
+        <div class="input-group">
+            <label>Location</label>
+            <input type="text" name="location">
+        </div>
+        <div class="input-group">
+            <label>Phone Number</label>
+            <input type="" name="phone">
+        </div>
+        <div class="input-group">
+        <label>What to recycle</label>
+        <select>
+           <option>Select</option>
+           <option>Plastic</option>
+           <option>Nylon</option>
+           <option>Aluminium</option>
+        </select>
+        </div>
+        
+        
+        <div class="input-group">
+            <button type="submit" class="btn" name="login_user">Submit</button>
+        </div>
+        <p>
+<!--            Not yet a member? <a href="register.php">Sign up</a><br>-->
+            <a href="index.html">Go to home page</a>
+        </p>
+    </form>
+</body></html>
